@@ -10,7 +10,7 @@ namespace ProgEprov
     {
         static void Main(string[] args)
         {
-            Superguy sg = new Superguy();
+            Superguy sg = new Superguy(); //Skapar ny instans av subklassen
             Megawoman mw = new Megawoman();
 
             Console.WriteLine("Would you like to play as a Superguy or a Megawoman");
@@ -19,12 +19,12 @@ namespace ProgEprov
             int gameloop = 1;
             while (gameloop == 1)
             {
-                if (input == "1")
+                if (input == "1") //Ifall användaren anger 1 som input så körs nedanstående if-sats
                 {
                     Console.WriteLine("What would you like to be called"); 
-                    string input1 = Console.ReadLine();
-                    sg.name = input1;
-                    Console.WriteLine("Your name is now " + sg.name);
+                    string input1 = Console.ReadLine(); // De namn användaren anger blir input1
+                    sg.name = input1; // Denna input överskriver de namn som tidigare angivits inom classen
+                    Console.WriteLine("Your name is now " + sg.name); //Skriver ut de namn som användaren angivit
                     Console.WriteLine("Your hp is " + sg.hp);
                     gameloop++;
 
